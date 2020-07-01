@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Vtsns</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+</head>
+
+<body>
+<header>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-main">
+                    <span class="sr-only">Iskljucen navbar</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img src="img/vts.png"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse-main">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Naslovna</a></li>
+                    <li><a href="onama.html">O nama</a></li>
+                    <li><a href="studije.html">Studije</a></li>
+                    <li><a href="nastava.html">Nastava</a></li>
+                    <li><a href="saradnja.html">Saradnja i razvoj</a></li>
+                    <li><a id="darkmode" onclick="setDarkMode();"><i class="fa fa-sun-o"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <img src="img/pexi.jpg" class="hero">
+              <!-- Za pravljenje animacije koja se nalazi na carousel-u korišćena je Javascript biblioteka koda anime.js i kod se nalazi na linku https://tobiasahlin.com/moving-letters/#9 -->
+              <!-- -->
+            <h1 class="carousel-caption animation">
+                <span class="animation-wrapper">
+                    <span class="animation-letters">Visoka Tehnička Škola Strukovnih Studija u Novom Sadu</span>
+                </span>
+            </h1>
+          </div>
+          <div class="item">
+            <img src="img/construction.jpeg" class="hero">
+          </div>
+          <div class="item">
+            <img src="img/design.jpeg" class="hero">
+          </div>
+        </div>
+      </div>
+    
+    <div class="jumbotron">
+        <div class="container-fluid text-center">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="title darkmode">Odseci</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-8 col-xs-12" >
+                    <a href="http://vtsns.edu.rs/elektrotehnicki-odsek/"><img src="img/monitor.png"></a>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-8 col-xs-12">
+                    <a href="http://vtsns.edu.rs/masinski-odsek/"><img src="img/cogwheel.png"></a>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-8 col-xs-12">
+                    <a href="http://vtsns.edu.rs/odsek-zastite/"><img src="img/cone.png"></a>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-8 col-xs-12">
+                    <a href="http://vtsns.edu.rs/graficki-odsek/"><img src="img/vector.png"></a> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid text-justify prvi">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="title darkmode">Vesti</h2>
+            </div>
+        </div>
+        <!-- Unutar ovog diva nalazi se tekst koji blinkuje i vezan je za dve funkcije da se tako izrazim. -->
+        <!-- Klasa blinking je pozvana unutar funkcije blinking koja se nalazi u animate.js fajlu-->
+        <!-- Pomo html atributa data toggle i data target invokuje se Bootstrapov modal koji se nalazi u main.js fajlu -->
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="blinking" data-toggle="modal" data-target="#myModal" style="padding-bottom: 35px; cursor:pointer; color: darkred;">MERE ZAŠTITE UNUTAR ŠKOLE</h2>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Ovde pocinje modal koji se prikazuje kada se na klikne na tekst gore. -->
+            <!-- Unutar modala nalazi se slika i dugme za zatvaranje istog kao i x sa desne strane.-->
+            <!-- Ovaj kod je iskopiran od strane zvanične Bootstrap 3.3.7 dokumentacije i podešen za potrebe -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                      <img src="img/covid.jpg" style="width: 551px; height: auto;">
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Zatvori</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+        <div class="col-lg-6 col-md-4 col-sm-6 col-xs-12">
+            <img src="img/student.jpg" class="img-responsive">
+        </div>
+        <div class="col-lg-6 col-md-8 col-sm-6 col-xs-12">
+          <h3 class="darkmode">MATERIJALI ZA PRIJEMNI ISPIT za upis u 2020/2021. školsku godinu</h3>
+          <p class="darkmode">Kao pomoć pri spremanju prijemnog ispita, u zbirci zadataka prijemnih ispita od prethodnih godina, tačni odgovori na zadatke iz računarstva, fizike i hemije su boldovani. Pitanja sa odgovorima iz grafičkog inženjerstva i primenjenih umetnosti i dizajna su linkovana ispod ovog teksta. Urađeni zadaci iz matematike i imejlovi nastavnika za pripadajuće oblasti su linkovani u Tabeli 1.</p>
+        </div>
+        </div>
+    </div>
+
+    <div class="container-fluid text-justify prvi">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
+                <h3 class="darkmode">O upisu na VTŠ RTV Vojvodina</h3>
+                <p class="darkmode">Direktor Visoke tehničke škole strukovnih studija u Novom Sadu, dr Branko Savić, profesor i Predsednik Konferencije akademija i visokih škola Srbije, Član generalne skupštine Evropske asocijacijacije visokih škola, u gostovanju na RTV Vojvodina istakao je prednosti upisa 62. generacije studenta na 10 osnovnih i 2 master strukovna studijska programa. Studijski programi naše škole u skladu su sa potrebama tržišta rada, što stručna praksa studenata i saradnja sa privredom stalno dokazuju. Visoka tehnička škola strukovnih studija u Novom Sadu prepoznata je kao uvažna i na međunarodnim konferencijama, i kao učesnica međunarodnih projekata i programa mobilnosti studenata i profesora.</p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <img src="img/licence.jpg" class="img-responsive">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid text-justify prvi">
+        <div class="row">
+            <div class="col-lg-6 col-md-4 col-sm-6 col-xs-12">
+                <img src="img/student.jpg" class="img-responsive">
+            </div>
+            <div class="col-lg-6 col-md-8 col-sm-6 col-xs-12">
+                <h3 class="darkmode">STRUČNA MASTER PRAKSA 1</h3>
+                <p class="darkmode">Obaveštavaju se studenti koji su pohađali Stručnu master praksu 1 da dnevnik  prakse, izveštaj o obavljenoj praksi i kopiju uputa za obavljanje prakse pošalju profesoru Gavanski Dušanu na e-mail: gavanski@vtsns.edu.rs   do  25.05.2020.</p><br>
+                <h3 class="darkmode">STRUČNA / INŽENjERSKA PRAKSA – Maj – Jul</h3>
+                <p class="darkmode">Obaveštenje za studente koji su predmet Stručnu / Inženjersku praksu trebali da obavljaju od maja do jula možete pročitati ovde.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid text-justify prvi">
+      <div class="row">
+        <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
+          <h3 class="darkmode">OBAVEŠTENjE ZA STUDENTE OSNOVNIH STUDIJA</h3>
+          <p class="darkmode">Obaveštavaju se studenti koji obavljaju praksu u letnjem semestru da je promenjen termin dodele overenih uputa.
+
+              22.02.2019. godine u 12.00 u amfiteatru biće dodela overenih uputa studentima koji obavljaju praksu u letnjem semestru.
+              
+              <mark>Prisustvo je obavezno.</mark></p>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+          <img src="img/licence.jpg" class="img-responsive">
+        </div>
+      </div>
+    </div>
+</main>
+    
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <p class = "futertext">Copyright Visoka tehnička škola strukovnih studija u Novom Sadu. 2019.</p>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-vimeo-v"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/animate.js"></script>
+</body>
+</html>
