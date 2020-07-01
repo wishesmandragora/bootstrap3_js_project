@@ -51,6 +51,9 @@ padding: 0 !important;
 .dark-mode .navbar-default {
     background-color: black;
 }
+.dark-mode footer {
+    background-color: black;
+}
 .hero{
     height: auto;
     width: 100%;
