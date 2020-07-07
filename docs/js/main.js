@@ -13,9 +13,9 @@ let secondlist = "<li>" + options.set1.join("</li><li>") + "</li>";
 document.getElementById("second-list").innerHTML = secondlist;
 
 
-$('#myModal').on('shown.bs.modal', function () {
-  $('#myInput').focus()
-});
+$(document).ready(function () {
+  $('#myModal').modal();
+ });
 
 function setDarkMode() {
    var element = document.body;
